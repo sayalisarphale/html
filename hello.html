@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Submission Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    form {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    .form-section {
+      margin-bottom: 20px;
+    }
+    .form-section-title {
+      font-size: 1.2em;
+      margin-top: 20px;
+      text-decoration: underline;
+    }
+    .checkbox-label {
+      font-weight: normal;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Resume Submission Form</h1>
+  <form action="#" method="POST" enctype="multipart/form-data">
+    
+    <!-- Personal Information -->
+    <div class="form-section">
+      <label for="fieldName">Field Name</label>
+      <input type="text" id="fieldName" name="fieldName" required>
+
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit number">
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="maritalStatus">Marital Status</label>
+      <select id="maritalStatus" name="maritalStatus" required>
+        <option value="">Select</option>
+        <option value="Single">Single</option>
+        <option value="Married">Married</option>
+        <option value="Divorced">Divorced</option>
+      </select>
+
+      <label for="nationality">Nationality</label>
+      <input type="text" id="nationality" name="nationality" required>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="linkedin">LinkedIn Profile URL</label>
+      <input type="url" id="linkedin" name="linkedin">
+
+      <label for="github">GitHub Profile URL</label>
+      <input type="url" id="github" name="github">
+    </div>
+
+    <!-- Uploads -->
+    <div class="form-section">
+      <label for="profilePhoto">Upload Profile Photo</label>
+      <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" required>
+
+      <label for="resume">Upload Resume (PDF only)</label>
+      <input type="file" id="resume" name="resume" accept="application/pdf" required>
+    </div>
+
+    <!-- Career and Education -->
+    <div class="form-section">
+      <label for="objective">Career Objective</label>
+      <textarea id="objective" name="objective" rows="4" required></textarea>
+
+      <label for="qualification">Highest Qualification</label>
+      <input type="text" id="qualification" name="qualification" required>
+
+      <label for="college">Name of College / University</label>
+      <input type="text" id="college" name="college" required>
+
+      <label for="gradYear">Year of Graduation</label>
+      <input type="number" id="gradYear" name="gradYear" min="1950" max="2099" required>
+    </div>
+
+    <!-- Skills -->
+    <div class="form-section">
+      <label for="techSkills">Technical Skills (HTML, CSS, JS, etc.)</label>
+      <textarea id="techSkills" name="techSkills" rows="2" required></textarea>
+
+      <label for="progLangs">Programming Languages Known</label>
+      <textarea id="progLangs" name="progLangs" rows="2" required></textarea>
+
+      <label for="certifications">Certifications (if any)</label>
+      <textarea id="certifications" name="certifications" rows="2"></textarea>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="form-section">
+      <label for="experience">Work Experience (Years)</label>
+      <input type="number" id="experience" name="experience" min="0" required>
+
+      <label for="lastCompany">Last Company Worked At</label>
+      <input type="text" id="lastCompany" name="lastCompany">
+
+      <label for="jobRole">Your Job Role / Designation</label>
+      <input type="text" id="jobRole" name="jobRole">
+    </div>
+
+    <!-- Personal Interests -->
+    <div class="form-section">
+      <label for="languagesKnown">Languages Known</label>
+      <textarea id="languagesKnown" name="languagesKnown" rows="2" required></textarea>
+
+      <label for="hobbies">Hobbies</label>
+      <textarea id="hobbies" name="hobbies" rows="2"></textarea>
+    </div>
+
+    <!-- Declaration -->
+    <div class="form-section">
+      <label>
+        <input type="checkbox" name="declaration" required>
+        <span class="checkbox-label">I hereby declare that all the information provided is true and correct to the best of my knowledge.</span>
+      </label>
+    </div>
+
+    <button type="submit">Submit Resume</button>
+  </form>
+</body>
+</html>
